@@ -1,0 +1,105 @@
+
+ html {
+
+  scroll-behavior: smooth;
+
+}
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 1.5rem 0;
+  line-height: 1.1;
+  max-width: 900px;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espacio entre los botones */
+}
+
+/* BOTÓN IZQUIERDA: Ver Metodología (Estilo Secundario) */
+.secondaryBtn {
+  text-decoration: none; /* Quita el subrayado del link */
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--text-muted);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #fff;
+}
+
+/* BOTÓN DERECHA: Contactar (Estilo Primario que resalta) */
+.primaryBtn {
+  text-decoration: none; /* Quita el subrayado del link */
+  background: var(--accent);
+  color: #020617; /* Contraste oscuro sobre el fondo verde/acento */
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .primaryBtn, .secondaryBtn {
+    margin-right: 0;
+    width: 100%;
+  }
+}

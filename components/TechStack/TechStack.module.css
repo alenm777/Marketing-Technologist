@@ -1,0 +1,88 @@
+.container {
+  padding: 5rem 0;
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.slider {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Animación del carrusel */
+.slideTrack {
+  display: flex;
+  width: calc(250px * 20); /* Basado en el ancho del slide x total de items */
+  animation: scroll 35s linear infinite;
+}
+
+.slide {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.slide:hover .logoName {
+  color: var(--accent);
+  transform: scale(1.1);
+  text-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 10)); }
+}
+
+/* Degradados laterales para suavizar la entrada/salida */
+.slider::before, .slider::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 20%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, #020617 0%, transparent 100%);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, #020617 0%, transparent 100%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logoName { font-size: 1.2rem; }
+  .slide { width: 150px; }
+  .slideTrack { width: calc(150px * 20); }
+  @keyframes scroll {
+    100% { transform: translateX(calc(-150px * 10)); }
+  }
+}
