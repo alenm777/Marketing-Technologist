@@ -1,0 +1,109 @@
+.container {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  color: #10b981; /* Tu color verde accent */
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  border-color: #10b981;
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.photoWrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 25px;
+}
+
+.photo {
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border: 2px solid rgba(16, 185, 129, 0.3);
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: #10b981;
+  filter: blur(30px);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.quoteIcon {
+  width: 30px;
+  height: 30px;
+  color: #10b981;
+  opacity: 0.4;
+  margin-bottom: 15px;
+}
+
+.quote {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.info .name {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.info .specialty {
+  color: #10b981;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .title { font-size: 1.8rem; }
+  .grid { grid-template-columns: 1fr; }
+  .card { padding: 30px; }
+}

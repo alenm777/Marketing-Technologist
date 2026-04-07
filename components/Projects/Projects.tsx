@@ -39,7 +39,7 @@ const projects = [
     desc: "Diseño persuasivo y flujos de captación para estética quirúrgica.",
     stack: ["WordPress", "Vitals Opt.", "Google Ads"],
     flow: "Search Ads → LP → WhatsApp Conversion",
-    link: "https://artemeddical.com/cirugia-plasticas-extranjeras/" 
+    link: "https://artemeddical.com/cirugia-plastica-extranjeras/" 
   },
   { 
     title: "Dra. Dahiana Olarte", 
