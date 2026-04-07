@@ -4,19 +4,20 @@ const steps = [
   {
     num: "01",
     title: "Auditoría & Estrategia",
-    desc: "Analizo tu infraestructura actual, detecto fugas de leads y diseño un embudo a medida para tu nicho específico."
+    desc: "Analizamos tu embudo actual y detectamos los cuellos de botella donde estás perdiendo ventas."
   },
   {
     num: "02",
-    title: "Implementación Tech",
-    desc: "Despliegue de LPs de alta velocidad, integración de CRM (GHL) y automatización de flujos de nutrición 24/7."
+    title: "Infraestructura & Automatización", 
+    desc: "Implementamos GoHighLevel o conectamos tu CRM actual con n8n para crear flujos de trabajo robustos."
   },
   {
     num: "03",
-    title: "Escalado & Optimización",
-    desc: "Lanzamiento de campañas de performance (Meta/Google) y ajuste basado en datos para maximizar tu ROI."
+    title: "Escalado de Ventas", // Regresamos al enfoque original
+    desc: "Optimizamos tus campañas y procesos para maximizar la conversión y bajar tu costo de adquisición."
   }
 ];
+
 
 export default function Methodology() {
   return (

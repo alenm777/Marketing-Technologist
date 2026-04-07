@@ -24,11 +24,12 @@
   align-items: center;
 }
 
-/* Animación del carrusel */
+/* Animación del carrusel corregida para 11 elementos (22 total) */
 .slideTrack {
   display: flex;
-  width: calc(250px * 20); /* Basado en el ancho del slide x total de items */
-  animation: scroll 35s linear infinite;
+  /* 250px * 22 elementos totales */
+  width: calc(250px * 22); 
+  animation: scroll 40s linear infinite; /* Un poco más lento para que n8n se lea bien */
 }
 
 .slide {
@@ -54,10 +55,10 @@
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-250px * 10)); }
+  /* Se desplaza exactamente la mitad del track (11 elementos) */
+  100% { transform: translateX(calc(-250px * 11)); }
 }
 
-/* Degradados laterales para suavizar la entrada/salida */
 .slider::before, .slider::after {
   content: "";
   height: 100%;
@@ -77,12 +78,12 @@
   background: linear-gradient(to left, #020617 0%, transparent 100%);
 }
 
-/* Responsive */
+/* Responsive corregido para 11 elementos */
 @media (max-width: 768px) {
   .logoName { font-size: 1.2rem; }
   .slide { width: 150px; }
-  .slideTrack { width: calc(150px * 20); }
+  .slideTrack { width: calc(150px * 22); }
   @keyframes scroll {
-    100% { transform: translateX(calc(-150px * 10)); }
+    100% { transform: translateX(calc(-150px * 11)); }
   }
 }

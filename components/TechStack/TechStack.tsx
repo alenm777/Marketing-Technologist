@@ -7,6 +7,7 @@ const techLogos = [
   "Meta Ads", 
   "Google Ads", 
   "Make.com", 
+  "N8N", 
   "GTM", 
   "GA4", 
   "WhatsApp API", 
@@ -20,7 +21,7 @@ export default function TechStack() {
       
       <div className={styles.slider}>
         <div className={styles.slideTrack}>
-          {/* Duplicamos la lista para crear el efecto de bucle infinito perfecto */}
+          {/* Duplicamos la lista para el bucle infinito */}
           {[...techLogos, ...techLogos].map((logo, index) => (
             <div key={index} className={styles.slide}>
               <span className={styles.logoName}>{logo}</span>
