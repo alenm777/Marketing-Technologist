@@ -4,6 +4,7 @@ import Methodology from '../components/Methodology/Methodology';
 import Projects from '../components/Projects/Projects';
 import TechStack from '../components/TechStack/TechStack';
 import Testimonials from '../components/Testimonials/Testimonials';
+import TechnicalShowcase from '../components/TechnicalShowcase/TechnicalShowcase';
 import Footer from '../components/Footer/Footer';
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <main className={styles.main}>
       <Hero />
       <TechStack />
+      <TechnicalShowcase />
       <Methodology />
       <Testimonials /> 
       <Projects />
